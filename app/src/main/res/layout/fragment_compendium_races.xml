@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.compendium.CompendiumRaceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/raceSortSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                app:layout_constraintBottom_toBottomOf="@+id/raceHomeBrewSwitch"
+                app:layout_constraintEnd_toEndOf="@+id/classRecyclerView"
+                app:layout_constraintStart_toEndOf="@+id/raceHomeBrewSwitch"
+                app:layout_constraintTop_toTopOf="@+id/raceHomeBrewSwitch" />
+
+            <Switch
+                android:id="@+id/raceHomeBrewSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/standard_margin"
+                android:text="Include\n Homebrew?"
+                app:layout_constraintStart_toStartOf="@+id/classRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/raceSearchEditText" />
+
+            <EditText
+                android:id="@+id/raceSearchEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView43"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin"
+                android:text="Race\n Search"
+                android:textSize="@dimen/standard_large_text"
+                app:layout_constraintBottom_toBottomOf="@+id/raceSearchEditText"
+                app:layout_constraintEnd_toStartOf="@+id/raceSearchEditText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/raceSearchEditText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/classRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/standard_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/raceHomeBrewSwitch" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

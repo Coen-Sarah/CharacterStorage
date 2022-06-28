@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tempHPLabel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.character.CharacterKnowledgeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/strengthTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthHasProf"
+                app:layout_constraintStart_toEndOf="@+id/strengthHasProf"
+                app:layout_constraintTop_toTopOf="@+id/strengthHasProf" />
+
+            <TextView
+                android:id="@+id/charismaTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/charismaHasProf"
+                app:layout_constraintStart_toStartOf="@+id/wisdomTotal"
+                app:layout_constraintTop_toTopOf="@+id/charismaHasProf" />
+
+            <TextView
+                android:id="@+id/charismaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/charisma_full"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/charismaTotal"
+                app:layout_constraintStart_toStartOf="@+id/wisdomLabel"
+                app:layout_constraintTop_toTopOf="@+id/charismaTotal" />
+
+            <TextView
+                android:id="@+id/constitutionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Constitution"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/dexterityTotalLabel"
+                app:layout_constraintTop_toTopOf="@+id/constitutionTotal" />
+
+            <TextView
+                android:id="@+id/constitutionTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/constitutionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/dexterityTotal"
+                app:layout_constraintTop_toTopOf="@+id/constitutionHasProf" />
+
+            <TextView
+                android:id="@+id/dexterityTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/dexterityHasProf"
+                app:layout_constraintStart_toStartOf="@+id/strengthTotal"
+                app:layout_constraintTop_toTopOf="@+id/dexterityHasProf" />
+
+            <TextView
+                android:id="@+id/dexterityTotalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dexterity"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/strengthLabel"
+                app:layout_constraintTop_toTopOf="@+id/dexterityTotal" />
+
+            <TextView
+                android:id="@+id/strengthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/mini_margin"
+                android:text="@string/strength_full"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthTotal"
+                app:layout_constraintStart_toEndOf="@+id/strengthTotal"
+                app:layout_constraintTop_toTopOf="@+id/strengthTotal"
+                app:layout_constraintVertical_bias="0.0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/intelligenceTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/intelligenceHasProf"
+                app:layout_constraintStart_toStartOf="@+id/constitutionTotal"
+                app:layout_constraintTop_toTopOf="@+id/intelligenceHasProf" />
+
+            <TextView
+                android:id="@+id/wisdomTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/wisdomHasProf"
+                app:layout_constraintStart_toStartOf="@+id/intelligenceTotal"
+                app:layout_constraintTop_toTopOf="@+id/wisdomHasProf" />
+
+            <TextView
+                android:id="@+id/wisdomLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wisdom_full"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/intelligenceLabel"
+                app:layout_constraintTop_toTopOf="@+id/wisdomTotal" />
+
+            <TextView
+                android:id="@+id/wisdomBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/intelligenceBonus"
+                app:layout_constraintTop_toTopOf="@+id/wisdomLabel" />
+
+            <TextView
+                android:id="@+id/intelligenceBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/constitutionBonus"
+                app:layout_constraintTop_toTopOf="@+id/intelligenceLabel" />
+
+            <TextView
+                android:id="@+id/intelligenceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/intelligence_full"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/constitutionLabel"
+                app:layout_constraintTop_toTopOf="@+id/intelligenceTotal" />
+
+            <CheckBox
+                android:id="@+id/strengthHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/dexterityHasProf"
+                app:layout_constraintStart_toEndOf="@+id/acrobaticsBonus"
+                app:layout_constraintTop_toTopOf="@+id/acrobaticsHasProf"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <CheckBox
+                android:id="@+id/charismaHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView73"
+                app:layout_constraintStart_toStartOf="@+id/wisdomHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/wisdomHasProf" />
+
+            <CheckBox
+                android:id="@+id/wisdomHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/charismaHasProf"
+                app:layout_constraintStart_toStartOf="@+id/intelligenceHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/intelligenceHasProf" />
+
+            <CheckBox
+                android:id="@+id/intelligenceHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/wisdomHasProf"
+                app:layout_constraintStart_toStartOf="@+id/constitutionHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/constitutionHasProf" />
+
+            <CheckBox
+                android:id="@+id/constitutionHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/intelligenceHasProf"
+                app:layout_constraintStart_toStartOf="@+id/dexterityHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/dexterityHasProf" />
+
+            <CheckBox
+                android:id="@+id/dexterityHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/constitutionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/strengthHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/strengthHasProf" />
+
+            <TextView
+                android:id="@+id/strengthBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/mini_margin"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/strengthLabel"
+                app:layout_constraintStart_toEndOf="@+id/constitutionLabel"
+                app:layout_constraintTop_toTopOf="@+id/strengthLabel" />
+
+            <TextView
+                android:id="@+id/dexterityTotalBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/strengthBonus"
+                app:layout_constraintTop_toTopOf="@+id/dexterityTotalLabel" />
+
+            <TextView
+                android:id="@+id/constitutionBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/dexterityTotalBonus"
+                app:layout_constraintTop_toTopOf="@+id/constitutionLabel" />
+
+            <TextView
+                android:id="@+id/charismaBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/charismaLabel"
+                app:layout_constraintStart_toStartOf="@+id/wisdomBonus"
+                app:layout_constraintTop_toTopOf="@+id/charismaLabel" />
+
+            <CheckBox
+                android:id="@+id/acrobaticsHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/mini_margin"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/animalHandlingHasProf"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView76" />
+
+            <TextView
+                android:id="@+id/acrobaticsTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/acrobaticsHasProf"
+                app:layout_constraintStart_toEndOf="@+id/acrobaticsHasProf"
+                app:layout_constraintTop_toTopOf="@+id/acrobaticsHasProf" />
+
+            <TextView
+                android:id="@+id/acrobaticsBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/acrobaticsLabel"
+                app:layout_constraintStart_toStartOf="@+id/animalHandlingBonus"
+                app:layout_constraintTop_toTopOf="@+id/acrobaticsLabel" />
+
+            <TextView
+                android:id="@+id/survivalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Survival (Wis)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/survivalTotal"
+                app:layout_constraintStart_toEndOf="@+id/survivalTotal"
+                app:layout_constraintTop_toTopOf="@+id/survivalTotal" />
+
+            <TextView
+                android:id="@+id/survivalTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/survivalHasProf"
+                app:layout_constraintStart_toStartOf="@+id/stealthTotal"
+                app:layout_constraintTop_toTopOf="@+id/survivalHasProf" />
+
+            <CheckBox
+                android:id="@+id/survivalHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/stealthHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/stealthHasProf" />
+
+            <TextView
+                android:id="@+id/survivalBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mini_margin"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/survivalLabel"
+                app:layout_constraintStart_toEndOf="@+id/animalHandlingLabel"
+                app:layout_constraintTop_toTopOf="@+id/survivalLabel" />
+
+            <TextView
+                android:id="@+id/stealthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Stealth (Dex)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/stealthTotal"
+                app:layout_constraintStart_toEndOf="@+id/stealthTotal"
+                app:layout_constraintTop_toTopOf="@+id/stealthTotal" />
+
+            <CheckBox
+                android:id="@+id/stealthHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/survivalHasProf"
+                app:layout_constraintStart_toStartOf="@+id/sleightHandHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/sleightHandHasProf" />
+
+            <TextView
+                android:id="@+id/stealthBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/stealthLabel"
+                app:layout_constraintStart_toStartOf="@+id/survivalBonus"
+                app:layout_constraintTop_toTopOf="@+id/stealthLabel" />
+
+            <TextView
+                android:id="@+id/stealthTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/stealthHasProf"
+                app:layout_constraintStart_toStartOf="@+id/sleightHandTotal"
+                app:layout_constraintTop_toTopOf="@+id/stealthHasProf" />
+
+            <TextView
+                android:id="@+id/sleightHandLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Sleight of Hand (Dex)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sleightHandTotal"
+                app:layout_constraintStart_toEndOf="@+id/sleightHandTotal"
+                app:layout_constraintTop_toTopOf="@+id/sleightHandTotal" />
+
+            <TextView
+                android:id="@+id/sleightHandTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/sleightHandHasProf"
+                app:layout_constraintStart_toStartOf="@+id/religionTotal"
+                app:layout_constraintTop_toTopOf="@+id/sleightHandHasProf" />
+
+            <TextView
+                android:id="@+id/sleightHandBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/sleightHandLabel"
+                app:layout_constraintStart_toStartOf="@+id/stealthBonus"
+                app:layout_constraintTop_toTopOf="@+id/sleightHandLabel" />
+
+            <CheckBox
+                android:id="@+id/sleightHandHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/stealthHasProf"
+                app:layout_constraintStart_toStartOf="@+id/religionHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/religionHasProf" />
+
+            <CheckBox
+                android:id="@+id/performanceHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/persuationHasProf"
+                app:layout_constraintStart_toStartOf="@+id/perceptionHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/perceptionHasProf" />
+
+            <CheckBox
+                android:id="@+id/persuationHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/religionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/performanceHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/performanceHasProf" />
+
+            <CheckBox
+                android:id="@+id/religionHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/sleightHandHasProf"
+                app:layout_constraintStart_toStartOf="@+id/persuationHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/persuationHasProf" />
+
+            <CheckBox
+                android:id="@+id/intimidationHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/investigationHasProf"
+                app:layout_constraintStart_toStartOf="@+id/insightHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/insightHasProf" />
+
+            <TextView
+                android:id="@+id/intimidationTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/intimidationHasProf"
+                app:layout_constraintStart_toStartOf="@+id/insightTotal"
+                app:layout_constraintTop_toTopOf="@+id/intimidationHasProf" />
+
+            <TextView
+                android:id="@+id/intimidationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Intimidation (Cha)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/intimidationTotal"
+                app:layout_constraintStart_toEndOf="@+id/intimidationTotal"
+                app:layout_constraintTop_toTopOf="@+id/intimidationTotal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/acrobaticsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Acrobatics (Dex)"
+                app:layout_constraintBottom_toBottomOf="@+id/acrobaticsTotal"
+                app:layout_constraintStart_toEndOf="@+id/acrobaticsTotal"
+                app:layout_constraintTop_toTopOf="@+id/acrobaticsTotal"
+                app:layout_constraintVertical_bias="0.0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/animalHandlingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Animal Handling (Wis)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/animalHandlingTotal"
+                app:layout_constraintStart_toEndOf="@+id/animalHandlingTotal"
+                app:layout_constraintTop_toTopOf="@+id/animalHandlingTotal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/arcanaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Arcana (Int)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/arcanaTotal"
+                app:layout_constraintStart_toEndOf="@+id/arcanaTotal"
+                app:layout_constraintTop_toTopOf="@+id/arcanaTotal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/athleticsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Athletics (Str)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/athleticsTotal"
+                app:layout_constraintStart_toEndOf="@+id/athleticsTotal"
+                app:layout_constraintTop_toTopOf="@+id/athleticsTotal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/deceptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Deception (Cha)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/deceptionTotal"
+                app:layout_constraintStart_toEndOf="@+id/deceptionTotal"
+                app:layout_constraintTop_toTopOf="@+id/deceptionTotal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/historyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="History (Int)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/historyTotal"
+                app:layout_constraintStart_toEndOf="@+id/historyTotal"
+                app:layout_constraintTop_toTopOf="@+id/historyTotal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/insightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Insight (Wis)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/insightTotal"
+                app:layout_constraintStart_toEndOf="@+id/insightTotal"
+                app:layout_constraintTop_toTopOf="@+id/insightTotal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/intimidationBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/intimidationLabel"
+                app:layout_constraintStart_toStartOf="@+id/investigationBonus"
+                app:layout_constraintTop_toTopOf="@+id/intimidationLabel" />
+
+            <CheckBox
+                android:id="@+id/insightHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/intimidationHasProf"
+                app:layout_constraintStart_toStartOf="@+id/historyHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/historyHasProf" />
+
+            <TextView
+                android:id="@+id/insightTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/insightHasProf"
+                app:layout_constraintStart_toStartOf="@+id/historyTotal"
+                app:layout_constraintTop_toTopOf="@+id/insightHasProf" />
+
+            <TextView
+                android:id="@+id/insightBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/insightLabel"
+                app:layout_constraintStart_toStartOf="@+id/intimidationBonus"
+                app:layout_constraintTop_toTopOf="@+id/insightLabel" />
+
+            <CheckBox
+                android:id="@+id/historyHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/insightHasProf"
+                app:layout_constraintStart_toStartOf="@+id/deceptionHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/deceptionHasProf" />
+
+            <TextView
+                android:id="@+id/historyTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/historyHasProf"
+                app:layout_constraintStart_toStartOf="@+id/deceptionTotal"
+                app:layout_constraintTop_toTopOf="@+id/historyHasProf" />
+
+            <TextView
+                android:id="@+id/historyBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/historyLabel"
+                app:layout_constraintStart_toStartOf="@+id/insightBonus"
+                app:layout_constraintTop_toTopOf="@+id/historyLabel" />
+
+            <CheckBox
+                android:id="@+id/deceptionHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/historyHasProf"
+                app:layout_constraintStart_toStartOf="@+id/athleticsHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/athleticsHasProf" />
+
+            <TextView
+                android:id="@+id/deceptionTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/deceptionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/athleticsTotal"
+                app:layout_constraintTop_toTopOf="@+id/deceptionHasProf" />
+
+            <TextView
+                android:id="@+id/deceptionBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/deceptionLabel"
+                app:layout_constraintStart_toStartOf="@+id/historyBonus"
+                app:layout_constraintTop_toTopOf="@+id/deceptionLabel" />
+
+            <CheckBox
+                android:id="@+id/athleticsHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/deceptionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/arcanaHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/arcanaHasProf" />
+
+            <TextView
+                android:id="@+id/athleticsTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/athleticsHasProf"
+                app:layout_constraintStart_toStartOf="@+id/arcanaTotal"
+                app:layout_constraintTop_toTopOf="@+id/athleticsHasProf" />
+
+            <TextView
+                android:id="@+id/athleticsBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/athleticsLabel"
+                app:layout_constraintStart_toStartOf="@+id/deceptionBonus"
+                app:layout_constraintTop_toTopOf="@+id/athleticsLabel" />
+
+            <CheckBox
+                android:id="@+id/arcanaHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/athleticsHasProf"
+                app:layout_constraintStart_toStartOf="@+id/animalHandlingHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/animalHandlingHasProf" />
+
+            <TextView
+                android:id="@+id/arcanaTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/arcanaHasProf"
+                app:layout_constraintStart_toStartOf="@+id/animalHandlingTotal"
+                app:layout_constraintTop_toTopOf="@+id/arcanaHasProf" />
+
+            <TextView
+                android:id="@+id/arcanaBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/arcanaLabel"
+                app:layout_constraintStart_toStartOf="@+id/athleticsBonus"
+                app:layout_constraintTop_toTopOf="@+id/arcanaLabel" />
+
+            <CheckBox
+                android:id="@+id/animalHandlingHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/arcanaHasProf"
+                app:layout_constraintStart_toStartOf="@+id/acrobaticsHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/acrobaticsHasProf" />
+
+            <TextView
+                android:id="@+id/animalHandlingTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/animalHandlingHasProf"
+                app:layout_constraintStart_toStartOf="@+id/acrobaticsTotal"
+                app:layout_constraintTop_toTopOf="@+id/animalHandlingHasProf" />
+
+            <TextView
+                android:id="@+id/animalHandlingBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/animalHandlingLabel"
+                app:layout_constraintStart_toStartOf="@+id/arcanaBonus"
+                app:layout_constraintTop_toTopOf="@+id/animalHandlingLabel" />
+
+            <TextView
+                android:id="@+id/religionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Religion (Int)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/religionTotal"
+                app:layout_constraintStart_toEndOf="@+id/religionTotal"
+                app:layout_constraintTop_toTopOf="@+id/religionTotal" />
+
+            <TextView
+                android:id="@+id/religionBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/religionLabel"
+                app:layout_constraintStart_toStartOf="@+id/sleightHandBonus"
+                app:layout_constraintTop_toTopOf="@+id/religionLabel" />
+
+            <TextView
+                android:id="@+id/persuationBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/persuationLabel"
+                app:layout_constraintStart_toStartOf="@+id/religionBonus"
+                app:layout_constraintTop_toTopOf="@+id/persuationLabel" />
+
+            <TextView
+                android:id="@+id/persuationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Persuation (Cha)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/persuationTotal"
+                app:layout_constraintStart_toEndOf="@+id/persuationTotal"
+                app:layout_constraintTop_toTopOf="@+id/persuationTotal" />
+
+            <TextView
+                android:id="@+id/persuationTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/persuationHasProf"
+                app:layout_constraintStart_toStartOf="@+id/performanceTotal"
+                app:layout_constraintTop_toTopOf="@+id/persuationHasProf" />
+
+            <TextView
+                android:id="@+id/performanceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Performance (Cha)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/performanceTotal"
+                app:layout_constraintStart_toEndOf="@+id/performanceTotal"
+                app:layout_constraintTop_toTopOf="@+id/performanceTotal" />
+
+            <TextView
+                android:id="@+id/performanceTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/performanceHasProf"
+                app:layout_constraintStart_toStartOf="@+id/perceptionTotal"
+                app:layout_constraintTop_toTopOf="@+id/performanceHasProf" />
+
+            <TextView
+                android:id="@+id/performanceBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/performanceLabel"
+                app:layout_constraintStart_toStartOf="@+id/persuationBonus"
+                app:layout_constraintTop_toTopOf="@+id/performanceLabel" />
+
+            <TextView
+                android:id="@+id/perceptionBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/perceptionLabel"
+                app:layout_constraintStart_toStartOf="@+id/performanceBonus"
+                app:layout_constraintTop_toTopOf="@+id/perceptionLabel" />
+
+            <TextView
+                android:id="@+id/perceptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Perception (Wis)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/perceptionTotal"
+                app:layout_constraintStart_toEndOf="@+id/perceptionTotal"
+                app:layout_constraintTop_toTopOf="@+id/perceptionTotal" />
+
+            <TextView
+                android:id="@+id/perceptionTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/perceptionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/natureTotal"
+                app:layout_constraintTop_toTopOf="@+id/perceptionHasProf" />
+
+            <CheckBox
+                android:id="@+id/perceptionHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/performanceHasProf"
+                app:layout_constraintStart_toStartOf="@+id/natureHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/natureHasProf" />
+
+            <CheckBox
+                android:id="@+id/natureHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/perceptionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/medicineHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/medicineHasProf" />
+
+            <TextView
+                android:id="@+id/natureLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Nature (Int)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/natureTotal"
+                app:layout_constraintStart_toEndOf="@+id/natureTotal"
+                app:layout_constraintTop_toTopOf="@+id/natureTotal" />
+
+            <TextView
+                android:id="@+id/natureBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/natureLabel"
+                app:layout_constraintStart_toStartOf="@+id/perceptionBonus"
+                app:layout_constraintTop_toTopOf="@+id/natureLabel" />
+
+            <TextView
+                android:id="@+id/natureTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/natureHasProf"
+                app:layout_constraintStart_toStartOf="@+id/medicineTotal"
+                app:layout_constraintTop_toTopOf="@+id/natureHasProf" />
+
+            <TextView
+                android:id="@+id/medicineLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Medicine (Wis)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/medicineTotal"
+                app:layout_constraintStart_toEndOf="@+id/medicineTotal"
+                app:layout_constraintTop_toTopOf="@+id/medicineTotal" />
+
+            <CheckBox
+                android:id="@+id/medicineHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/natureHasProf"
+                app:layout_constraintStart_toStartOf="@+id/investigationHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/investigationHasProf" />
+
+            <TextView
+                android:id="@+id/medicineBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/medicineLabel"
+                app:layout_constraintStart_toStartOf="@+id/natureBonus"
+                app:layout_constraintTop_toTopOf="@+id/medicineLabel" />
+
+            <TextView
+                android:id="@+id/medicineTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/medicineHasProf"
+                app:layout_constraintStart_toStartOf="@+id/investigationTotal"
+                app:layout_constraintTop_toTopOf="@+id/medicineHasProf" />
+
+            <CheckBox
+                android:id="@+id/investigationHasProf"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:width="24dp"
+                android:height="36dp"
+                app:layout_constraintBottom_toTopOf="@+id/medicineHasProf"
+                app:layout_constraintStart_toStartOf="@+id/intimidationHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/intimidationHasProf" />
+
+            <TextView
+                android:id="@+id/investigationTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/investigationHasProf"
+                app:layout_constraintStart_toStartOf="@+id/intimidationTotal"
+                app:layout_constraintTop_toTopOf="@+id/investigationHasProf" />
+
+            <TextView
+                android:id="@+id/investigationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mini_margin"
+                android:text="Investigation (Int)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/investigationTotal"
+                app:layout_constraintStart_toEndOf="@+id/investigationTotal"
+                app:layout_constraintTop_toTopOf="@+id/investigationTotal" />
+
+            <TextView
+                android:id="@+id/investigationBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/investigationLabel"
+                app:layout_constraintStart_toStartOf="@+id/medicineBonus"
+                app:layout_constraintTop_toTopOf="@+id/investigationLabel" />
+
+            <TextView
+                android:id="@+id/religionTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0"
+                app:layout_constraintBottom_toBottomOf="@+id/religionHasProf"
+                app:layout_constraintStart_toStartOf="@+id/persuationTotal"
+                app:layout_constraintTop_toTopOf="@+id/religionHasProf" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/mini_margin"
+                android:text="Proficencies"
+                android:textSize="@dimen/standard_large_text"
+                app:layout_constraintBottom_toTopOf="@+id/textView75"
+                app:layout_constraintStart_toStartOf="@+id/textView74"
+                app:layout_constraintTop_toBottomOf="@+id/textView74" />
+
+            <TextView
+                android:id="@+id/textView73"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:text="Languages"
+                android:textSize="@dimen/standard_large_text"
+                app:layout_constraintBottom_toTopOf="@+id/textView74"
+                app:layout_constraintStart_toStartOf="@+id/charismaHasProf"
+                app:layout_constraintTop_toBottomOf="@+id/charismaHasProf"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <TextView
+                android:id="@+id/textView74"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/textView72"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView73"
+                app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView72"
+                app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:text="Skills"
+                android:textSize="@dimen/standard_large_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saving Throws"
+                android:textSize="@dimen/standard_large_text"
+                app:layout_constraintStart_toStartOf="@+id/strengthHasProf"
+                app:layout_constraintTop_toTopOf="@+id/textView76" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

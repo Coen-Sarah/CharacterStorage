@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.character.CharacterCombatFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/savingThrowLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/checkBox13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox12"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView59"
+                    app:layout_constraintEnd_toEndOf="@+id/textView60"
+                    app:layout_constraintTop_toTopOf="@+id/textView59" />
+
+                <TextView
+                    android:id="@+id/textView59"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strength_full"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox13"
+                    app:layout_constraintStart_toStartOf="@+id/textView57"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox13" />
+
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/intelligence_full"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox10"
+                    app:layout_constraintStart_toStartOf="@+id/textView50"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox10" />
+
+                <CheckBox
+                    android:id="@+id/checkBox12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox11"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox11"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox13" />
+
+                <TextView
+                    android:id="@+id/textView57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dexterity"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox12"
+                    app:layout_constraintStart_toStartOf="@+id/textView55"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox12" />
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView57"
+                    app:layout_constraintEnd_toEndOf="@+id/textView58"
+                    app:layout_constraintTop_toTopOf="@+id/textView57" />
+
+                <CheckBox
+                    android:id="@+id/checkBox11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox10"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox10"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox12" />
+
+                <TextView
+                    android:id="@+id/textView55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Constitution"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox11"
+                    app:layout_constraintStart_toStartOf="@+id/textView53"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox11" />
+
+                <TextView
+                    android:id="@+id/textView58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView55"
+                    app:layout_constraintEnd_toEndOf="@+id/textView56"
+                    app:layout_constraintTop_toTopOf="@+id/textView55" />
+
+                <CheckBox
+                    android:id="@+id/checkBox10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox9"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox9"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
+
+                <TextView
+                    android:id="@+id/textView56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView53"
+                    app:layout_constraintEnd_toEndOf="@+id/textView54"
+                    app:layout_constraintTop_toTopOf="@+id/textView53" />
+
+                <CheckBox
+                    android:id="@+id/checkBox9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox8"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox8"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wisdom_full"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox9"
+                    app:layout_constraintStart_toStartOf="@+id/textView61"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox9" />
+
+                <TextView
+                    android:id="@+id/textView54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView50"
+                    app:layout_constraintEnd_toEndOf="@+id/textView52"
+                    app:layout_constraintTop_toTopOf="@+id/textView50" />
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:text="@string/charisma_full"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBox8"
+                    app:layout_constraintStart_toEndOf="@+id/checkBox8"
+                    app:layout_constraintTop_toTopOf="@+id/checkBox8" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mini_margin"
+                    android:text="00"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView61"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView55"
+                    app:layout_constraintTop_toTopOf="@+id/textView61"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mini_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin"
+                android:text="Death Saves"
+                android:textSize="@dimen/standard_large_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/HPLabel2" />
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/standard_margin"
+                android:text="Saving Throws"
+                android:textSize="@dimen/standard_large_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView41" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/attacksRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/standard_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView67" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:text="Temp HP"
+                app:layout_constraintStart_toStartOf="@+id/HPLabel"
+                app:layout_constraintTop_toBottomOf="@+id/HPLabel" />
+
+            <TextView
+                android:id="@+id/HPLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard_margin"
+                android:text="HP"
+                app:layout_constraintBottom_toBottomOf="@+id/currentHP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/currentHP" />
+
+            <TextView
+                android:id="@+id/currentHitDice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/mini_margin"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:text="00d00"
+                android:textSize="@dimen/standard_text"
+                app:layout_constraintStart_toEndOf="@+id/HPLabel2"
+                app:layout_constraintTop_toTopOf="@+id/HPLabel2" />
+
+            <TextView
+                android:id="@+id/maxHitDice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/mini_margin"
+                android:text="00d00"
+                android:textSize="@dimen/standard_text"
+                app:layout_constraintStart_toEndOf="@+id/ofLabel2"
+                app:layout_constraintTop_toTopOf="@+id/ofLabel2" />
+
+            <TextView
+                android:id="@+id/ofLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/mini_margin"
+                android:text="/"
+                android:textSize="@dimen/standard_text"
+                app:layout_constraintStart_toEndOf="@+id/currentHitDice"
+                app:layout_constraintTop_toTopOf="@+id/currentHitDice" />
+
+            <TextView
+                android:id="@+id/HPLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/small_margin"
+                android:text="Hit Dice"
+                app:layout_constraintStart_toStartOf="@+id/textView36"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/currentHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/mini_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:text="00"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintEnd_toStartOf="@+id/ofLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/maxHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintEnd_toEndOf="@+id/tempHP"
+                app:layout_constraintTop_toTopOf="@+id/ofLabel" />
+
+            <TextView
+                android:id="@+id/ofLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/mini_margin"
+                android:text="/"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintEnd_toStartOf="@+id/maxHP"
+                app:layout_constraintTop_toTopOf="@+id/currentHP" />
+
+            <TextView
+                android:id="@+id/tempHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                app:layout_constraintEnd_toEndOf="@+id/maxHitDice"
+                app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/initiative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintEnd_toEndOf="@+id/textView32"
+                app:layout_constraintStart_toStartOf="@+id/textView32"
+                app:layout_constraintTop_toTopOf="@+id/armorClass" />
+
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintEnd_toEndOf="@+id/textView33"
+                app:layout_constraintStart_toStartOf="@+id/textView33"
+                app:layout_constraintTop_toTopOf="@+id/initiative" />
+
+            <TextView
+                android:id="@+id/armorClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintEnd_toEndOf="@+id/textView31"
+                app:layout_constraintStart_toStartOf="@+id/textView31"
+                app:layout_constraintTop_toTopOf="@+id/currentHP" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC"
+                app:layout_constraintEnd_toStartOf="@+id/textView32"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tempHP"
+                app:layout_constraintTop_toTopOf="@+id/tempHP" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView32"
+                app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Initiative"
+                app:layout_constraintEnd_toStartOf="@+id/textView33"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView31"
+                app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attacks"
+                android:textSize="@dimen/medium_text"
+                app:layout_constraintStart_toStartOf="@+id/textView41"
+                app:layout_constraintTop_toBottomOf="@+id/failCheck1" />
+
+            <CheckBox
+                android:id="@+id/successCheck3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintStart_toEndOf="@+id/successCheck2"
+                app:layout_constraintTop_toTopOf="@+id/successCheck2" />
+
+            <CheckBox
+                android:id="@+id/successCheck1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="@dimen/small_margin"
+                app:layout_constraintStart_toEndOf="@+id/textView41"
+                app:layout_constraintTop_toTopOf="@+id/textView41" />
+
+            <CheckBox
+                android:id="@+id/successCheck2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintStart_toEndOf="@+id/successCheck1"
+                app:layout_constraintTop_toTopOf="@+id/successCheck1" />
+
+            <CheckBox
+                android:id="@+id/failCheck3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintStart_toEndOf="@+id/failCheck2"
+                app:layout_constraintTop_toTopOf="@+id/failCheck2" />
+
+            <CheckBox
+                android:id="@+id/failCheck1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintStart_toStartOf="@+id/successCheck1"
+                app:layout_constraintTop_toBottomOf="@+id/successCheck1" />
+
+            <CheckBox
+                android:id="@+id/failCheck2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:layout_constraintStart_toEndOf="@+id/failCheck1"
+                app:layout_constraintTop_toTopOf="@+id/failCheck1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>
