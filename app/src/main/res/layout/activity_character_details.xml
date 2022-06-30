@@ -7,250 +7,263 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".CharacterDetails">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView11"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".activity.CharacterDetailsActivity">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/mini_margin"
+                android:text="STR"
+                app:layout_constraintEnd_toEndOf="@+id/strStat"
+                app:layout_constraintStart_toStartOf="@+id/strStat"
+                app:layout_constraintTop_toBottomOf="@+id/campaignText" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEX"
+                app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="@+id/dexStat"
+                app:layout_constraintStart_toStartOf="@+id/dexStat" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CON"
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintEnd_toEndOf="@+id/conStat"
+                app:layout_constraintStart_toStartOf="@+id/conStat" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INT"
+                app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                app:layout_constraintEnd_toEndOf="@+id/intStat"
+                app:layout_constraintStart_toStartOf="@+id/intStat" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WIS"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="@+id/wisStat"
+                app:layout_constraintStart_toStartOf="@+id/wisStat" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHA"
+                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                app:layout_constraintEnd_toEndOf="@+id/charStat"
+                app:layout_constraintStart_toStartOf="@+id/charStat" />
+
+            <TextView
+                android:id="@+id/conMod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/conStat"
+                app:layout_constraintStart_toStartOf="@+id/conStat"
+                app:layout_constraintTop_toTopOf="@+id/intMod" />
+
+            <TextView
+                android:id="@+id/charMod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/charStat"
+                app:layout_constraintHorizontal_bias="0.578"
+                app:layout_constraintStart_toStartOf="@+id/charStat"
+                app:layout_constraintTop_toBottomOf="@+id/charStat" />
+
+            <TextView
+                android:id="@+id/dexMod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/dexStat"
+                app:layout_constraintStart_toStartOf="@+id/dexStat"
+                app:layout_constraintTop_toTopOf="@+id/conMod" />
+
+            <TextView
+                android:id="@+id/wisMod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/wisStat"
+                app:layout_constraintStart_toStartOf="@+id/wisStat"
+                app:layout_constraintTop_toTopOf="@+id/charMod" />
+
+            <TextView
+                android:id="@+id/strMod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/strStat"
+                app:layout_constraintStart_toStartOf="@+id/strStat"
+                app:layout_constraintTop_toTopOf="@+id/dexMod" />
+
+            <TextView
+                android:id="@+id/intMod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="@+id/intStat"
+                app:layout_constraintStart_toStartOf="@+id/intStat"
+                app:layout_constraintTop_toTopOf="@+id/wisMod" />
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:text="Character Name"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintEnd_toStartOf="@+id/levelText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/campaignText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/mini_margin"
+                android:text="Campagin"
+                app:layout_constraintStart_toStartOf="@+id/nameText"
+                app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+            <TextView
+                android:id="@+id/levelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/small_margin"
+                android:text="10"
+                app:layout_constraintBottom_toBottomOf="@+id/nameText"
+                app:layout_constraintEnd_toStartOf="@+id/classText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/nameText" />
+
+            <TextView
+                android:id="@+id/classText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/levelText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/levelText" />
+
+            <TextView
+                android:id="@+id/charStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/wisStat"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/dexStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintBottom_toBottomOf="@+id/conStat"
+                app:layout_constraintEnd_toStartOf="@+id/conStat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/strStat" />
+
+            <TextView
+                android:id="@+id/conStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintBottom_toBottomOf="@+id/intStat"
+                app:layout_constraintEnd_toStartOf="@+id/intStat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dexStat" />
+
+            <TextView
+                android:id="@+id/intStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintBottom_toBottomOf="@+id/wisStat"
+                app:layout_constraintEnd_toStartOf="@+id/wisStat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/conStat" />
+
+            <TextView
+                android:id="@+id/wisStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintBottom_toBottomOf="@+id/charStat"
+                app:layout_constraintEnd_toStartOf="@+id/charStat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intStat" />
+
+            <TextView
+                android:id="@+id/strStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintBottom_toBottomOf="@+id/dexStat"
+                app:layout_constraintEnd_toStartOf="@+id/dexStat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/characterTabLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/standard_margin"
+                android:layout_marginVertical="@dimen/small_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/charMod" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/characterViewPager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/standard_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/charMod" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/characterNavView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mini_margin"
-            android:text="STR"
-            app:layout_constraintEnd_toEndOf="@+id/strStat"
-            app:layout_constraintStart_toStartOf="@+id/strStat"
-            app:layout_constraintTop_toBottomOf="@+id/campaignText" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DEX"
-            app:layout_constraintBottom_toBottomOf="@+id/textView11"
-            app:layout_constraintEnd_toEndOf="@+id/dexStat"
-            app:layout_constraintStart_toStartOf="@+id/dexStat" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CON"
-            app:layout_constraintBottom_toBottomOf="@+id/textView12"
-            app:layout_constraintEnd_toEndOf="@+id/conStat"
-            app:layout_constraintStart_toStartOf="@+id/conStat" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="INT"
-            app:layout_constraintBottom_toBottomOf="@+id/textView13"
-            app:layout_constraintEnd_toEndOf="@+id/intStat"
-            app:layout_constraintStart_toStartOf="@+id/intStat" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WIS"
-            app:layout_constraintBottom_toBottomOf="@+id/textView14"
-            app:layout_constraintEnd_toEndOf="@+id/wisStat"
-            app:layout_constraintStart_toStartOf="@+id/wisStat" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CHA"
-            app:layout_constraintBottom_toBottomOf="@+id/textView15"
-            app:layout_constraintEnd_toEndOf="@+id/charStat"
-            app:layout_constraintStart_toStartOf="@+id/charStat" />
-
-        <TextView
-            android:id="@+id/conMod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            app:layout_constraintEnd_toEndOf="@+id/conStat"
-            app:layout_constraintStart_toStartOf="@+id/conStat"
-            app:layout_constraintTop_toTopOf="@+id/intMod" />
-
-        <TextView
-            android:id="@+id/charMod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            app:layout_constraintEnd_toEndOf="@+id/charStat"
-            app:layout_constraintHorizontal_bias="0.578"
-            app:layout_constraintStart_toStartOf="@+id/charStat"
-            app:layout_constraintTop_toBottomOf="@+id/charStat" />
-
-        <TextView
-            android:id="@+id/dexMod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            app:layout_constraintEnd_toEndOf="@+id/dexStat"
-            app:layout_constraintStart_toStartOf="@+id/dexStat"
-            app:layout_constraintTop_toTopOf="@+id/conMod" />
-
-        <TextView
-            android:id="@+id/wisMod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            app:layout_constraintEnd_toEndOf="@+id/wisStat"
-            app:layout_constraintStart_toStartOf="@+id/wisStat"
-            app:layout_constraintTop_toTopOf="@+id/charMod" />
-
-        <TextView
-            android:id="@+id/strMod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            app:layout_constraintEnd_toEndOf="@+id/strStat"
-            app:layout_constraintStart_toStartOf="@+id/strStat"
-            app:layout_constraintTop_toTopOf="@+id/dexMod" />
-
-        <TextView
-            android:id="@+id/intMod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            app:layout_constraintEnd_toEndOf="@+id/intStat"
-            app:layout_constraintStart_toStartOf="@+id/intStat"
-            app:layout_constraintTop_toTopOf="@+id/wisMod" />
-
-        <TextView
-            android:id="@+id/nameText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/standard_margin"
-            android:layout_marginTop="@dimen/standard_margin"
-            android:text="Character Name"
-            android:textSize="@dimen/large_text"
-            app:layout_constraintEnd_toStartOf="@+id/levelText"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/campaignText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/mini_margin"
-            android:text="Campagin"
-            app:layout_constraintStart_toStartOf="@+id/nameText"
-            app:layout_constraintTop_toBottomOf="@+id/nameText" />
-
-        <TextView
-            android:id="@+id/levelText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/small_margin"
-            android:text="10"
-            app:layout_constraintBottom_toBottomOf="@+id/nameText"
-            app:layout_constraintEnd_toStartOf="@+id/classText"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/nameText" />
-
-        <TextView
-            android:id="@+id/classText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/standard_margin"
-            android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="@+id/levelText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/levelText" />
-
-        <TextView
-            android:id="@+id/charStat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
-            android:textSize="@dimen/large_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/wisStat"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
-
-        <TextView
-            android:id="@+id/dexStat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
-            android:textSize="@dimen/large_text"
-            app:layout_constraintBottom_toBottomOf="@+id/conStat"
-            app:layout_constraintEnd_toStartOf="@+id/conStat"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/strStat" />
-
-        <TextView
-            android:id="@+id/conStat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
-            android:textSize="@dimen/large_text"
-            app:layout_constraintBottom_toBottomOf="@+id/intStat"
-            app:layout_constraintEnd_toStartOf="@+id/intStat"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/dexStat" />
-
-        <TextView
-            android:id="@+id/intStat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
-            android:textSize="@dimen/large_text"
-            app:layout_constraintBottom_toBottomOf="@+id/wisStat"
-            app:layout_constraintEnd_toStartOf="@+id/wisStat"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/conStat" />
-
-        <TextView
-            android:id="@+id/wisStat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
-            android:textSize="@dimen/large_text"
-            app:layout_constraintBottom_toBottomOf="@+id/charStat"
-            app:layout_constraintEnd_toStartOf="@+id/charStat"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/intStat" />
-
-        <TextView
-            android:id="@+id/strStat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00"
-            android:textSize="@dimen/large_text"
-            app:layout_constraintBottom_toBottomOf="@+id/dexStat"
-            app:layout_constraintEnd_toStartOf="@+id/dexStat"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/characterTabLayout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginHorizontal="@dimen/standard_margin"
-            android:layout_marginVertical="@dimen/small_margin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/charMod" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/characterViewPager"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="@dimen/standard_margin"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/charMod" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/navigation_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

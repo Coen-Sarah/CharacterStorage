@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".activity.LoginActivity">
 
     <TextView
         android:id="@+id/textView34"
@@ -28,6 +28,7 @@
         android:id="@+id/loginButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="login"
         android:text="@string/log_in"
         app:layout_constraintBottom_toTopOf="@+id/textView42"
         app:layout_constraintEnd_toEndOf="@+id/createNewButton"
@@ -133,8 +134,9 @@
         android:text="Character Creator"
         android:textSize="@dimen/large_text"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="95dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView42"

@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/activity_character_details.xml" value="0.32914572864321606" />
-        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/activity_compendium.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1255" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1255" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1255" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/drawable/side_nav_bar.xml" value="0.1255" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/activity_character_details.xml" value="0.16338028169014085" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/activity_compendium.xml" value="0.20350877192982456" />
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/activity_login.xml" value="0.4" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/activity_navigation.xml" value="0.2" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/app_bar_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/content_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/fragment_character_abilities.xml" value="0.4" />
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/fragment_character_combat.xml" value="0.4" />
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/fragment_character_inventory.xml" value="0.4" />
@@ -17,7 +24,9 @@
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/fragment_compendium_races.xml" value="0.264" />
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/fragment_compendium_spell.xml" value="0.42397914856646396" />
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/fragment_menu.xml" value="0.6" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/layout/nav_header_navigation.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/menu/character_fragment_menu.xml" value="0.4" />
+        <entry key="..\:/Users/sarah/AndroidStudioProjects/CharacterStorage/app/src/main/res/menu/navigation_menu.xml" value="0.4" />
         <entry key="..\:/Users/sarah/Downloads/CharacterStorage/app/src/main/res/layout/activity_character_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sarah/Downloads/CharacterStorage/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sarah/Downloads/CharacterStorage/app/src/main/res/layout/fragment_character_combat.xml" value="0.25416666666666665" />
